@@ -8,7 +8,7 @@
 
 ## パソコンの準備について
 
-- トレーニングコースでは、受講者にご自身でPCを準備して頂き、実際に操作しながらコマンドラインについて学んでいきます。PCのスペックについては、以下の **推奨条件** を参考にして下さい
+- トレーニングコースでは、受講者にご自身でPCを準備して頂き、実際に操作しながら学んでいきます。PCのスペックについては、以下の **推奨条件** を参考にして下さい
 
     - OS: Windows10,11 64bit版 または macOS 10.14.6（Mojave）- 12.0.1 (Monterey）
     - CPU: Intel Core i7/i9、Intel Core i5（クロック周波数2.0GHz以上）、または AMD Ryzen 5以上の性能を有するもの **注意: 現在、Apple M1はVirtualBoxで仮想マシンを動作できないため、Lin4Neuroは動作できません。以下をご覧ください**
@@ -31,13 +31,9 @@
 
     C. VirtualBoxへのLin4Neuroのインポート (15分)
 
-    D. 仮想マシンの設定 (5分)
+    D. 共有フォルダの設定 (5分)
 
     E. Lin4Neuroの起動と設定 (10分)
-
-    F. データの入手 (60分)
-
-    G. 受講のためのスクリプト実行 (3分)
 
     参考. 仮想マシンの削除 (チュートリアル後、不要になった場合)
 
@@ -47,11 +43,13 @@
 
 - 以下からLin4Neuroをダウンロードしてください。その際、リンクを右クリックして、「名前をつけて保存」から保存してください。16GBありますのでダウンロードには約1時間かかります。
 
-    - [L4N-2004-NIPS-2022xxxx.ovaのダウンロード](https://www.dropbox.com/t/wIrF4Wd7xFgJtoil){:target="_blank"}
+    - [L4N-2004-NIPS-20220321.ovaのダウンロード](https://www.dropbox.com/t/CT7c4ONOSwd0OyJO){:target="_blank"}
 
 ### B. VirtualBox 6.1.32以降 のインストール (所要時間約10分)
 
-チュートリアルでは、**<span style="color: red; ">VirtualBox 6.1.28以降</span>**の上で Lin4Neuro を動作させます。Lin4Neuro は、VirtualBox 6.1.32で最適化されているため、前のバージョンのVirtualBoxを使用の方は**必ず6.1.32以降にアップグレードしてください。**特にmacOSは、以前のバージョンでは仮想マシンが立ち上がらない不具合がありますのでご注意ください。なお、アップグレードする際は、一度、VirtualBoxを終了させないとエラーとなりますのでご注意ください。
+チュートリアルでは、**<span style="color: red; ">VirtualBox 6.1.28以降</span>**の上で Lin4Neuro を動作させます。Lin4Neuro は、VirtualBox 6.1.32で最適化されているため、前のバージョンのVirtualBoxを使用の方は**必ず6.1.32以降にアップグレードしてください。**特にmacOSは、以前のバージョンでは仮想マシンが立ち上がらない不具合がありますのでご注意ください。なお、アップグレードする際は、一度、VirtualBoxを終了させないとエラーとなりますのでご注意ください。なお、macOSの方は Homebrew 経由でインストールした方がエラーが起こりにくいことを経験しています。
+
+#### Windows
 
 - [VirtualBoxのサイト](https://www.virtualbox.org/wiki/Downloads){:target="_blank"} から、ご自身のOSにあったVirtualBoxのインストーラーをダウンロードします
 
@@ -60,6 +58,22 @@
 - インストール後、VirtualBoxを起動します
 
     ![セットアップ後画像](img/vb01.png)
+
+#### macOS
+
+- Homebrew経由でインストールします。まだ Homebrew をインストールしていない方は以下でインストールできます
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+- 次に、以下のコマンドでインストールできます
+
+```
+brew install virtualbox --cask
+```
+
+
 
 ### C. Lin4Neuro仮想アプライアンスのインポート (所要時間約15分)
 
@@ -72,7 +86,7 @@
 
     ![仮想アプライアンスのインポート1](img/vb02.png)
 
-- ファイルに、ダウンロードした **L4N-2004-NIPS-2022xxxx.ova** を指定し、 **<kbd>次へ</kbd>** をクリックします
+- ファイルに、ダウンロードした **L4N-2004-NIPS-20220321.ova** を指定し、 **<kbd>次へ</kbd>** をクリックします
 
     ![仮想アプライアンスのインポート2](img/vb03.png)
 
@@ -87,9 +101,7 @@
 
     ![仮想アプライアンスのインポート4](img/vb05.png)
 
-### D. 仮想マシンの設定 (所要時間約5分)
-
-#### 1. 共有フォルダの設定
+### D. 共有フォルダの設定 (所要時間約5分)
 
 - 30GB以上あいているところに、Macの方はFinderから、Windowsの方はエクスプローラーから、 **share** というフォルダを作成します。すべて小文字で作成してください
 
