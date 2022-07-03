@@ -41,10 +41,9 @@
 
 ### A. トレーニングコース用Lin4Neuro仮想アプライアンスのダウンロード (所要時間約1-2時間)
 
-- 以下からLin4Neuroをダウンロードしてください。その際、リンクを右クリックして、「名前をつけて保存」から保存してください。16GBありますのでダウンロードには約1時間かかります。
+- 以下からLin4Neuroをダウンロードしてください。16GBありますのでダウンロードには約1-2時間かかります。
 
-    - [L4N-2004-NIPS-20220321.ovaのダウンロード](https://www.dropbox.com/t/CT7c4ONOSwd0OyJO){:target="_blank"}
-
+    - [L4N-2004-NIPS-20220321.ovaのダウンロード](https://www.md.tsukuba.ac.jp/psy-neuroimaging/L4N/L4N-2004-NIPS-20220321.ova){:target="_blank"} 
 ### B. VirtualBox 6.1.32以降 のインストール (所要時間約10分)
 
 トレーニングコースでは、**<span style="color: red; ">VirtualBox 6.1.28以降</span>**の上で Lin4Neuro を動作させます。Lin4Neuro は、VirtualBox 6.1.32で最適化されているため、前のバージョンのVirtualBoxを使用の方は**必ず6.1.32以降にアップグレードしてください。**特にmacOSは、以前のバージョンでは仮想マシンが立ち上がらない不具合がありますのでご注意ください。なお、アップグレードする際は、一度、VirtualBoxを終了させないとエラーとなりますのでご注意ください。なお、macOSの方は Homebrew 経由でインストールした方がエラーが起こりにくいことを経験しています。
