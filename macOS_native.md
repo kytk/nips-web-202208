@@ -75,7 +75,7 @@ dcm2niix --version
 cd ~/Downloads
 curl -O https://fsl.fmrib.ox.ac.uk/fsldownloads/fslinstaller.py
 cd ~/Downloads
-python2 ./fslinstaller.py 
+python ./fslinstaller.py 
 ```
 
 - インストール完了後、FSLの設定は .profile に記載されるのですが、zshではうまく読み込まれないことがあるので、.zprofileにも記載します
